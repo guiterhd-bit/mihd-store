@@ -1,0 +1,89 @@
+[
+  {
+    "category": "📺 Youtube Không Quảng Cáo",
+    "apps": [
+      {
+        "name": "TizenTube Cho TV Quốc Tế",
+        "file": "https://github.com/guiterhd-bit/Xiaomi-H-i-D-ng/raw/refs/heads/main/TizenTube.apk"
+      },
+      {
+        "name": "SmartTube",
+        "file": "https://github.com/guiterhd-bit/Xiaomi-H-i-D-ng/raw/refs/heads/main/smarttube.apk"
+      },
+      {
+        "name": "YouTube TV Nội Địa",
+        "file": "https://github.com/guiterhd-bit/Xiaomi-H-i-D-ng/raw/refs/heads/main/youtube.apk"
+      }
+    ]
+  },
+
+  {
+    "category": "📡 Ứng dụng Truyền hình",
+    "apps": [
+      {
+        "name": "MiHD TV",
+        "file": "https://github.com/guiterhd-bit/direct-link/raw/refs/heads/main/MiHDTV.apk"
+      },
+      {
+        "name": "Mi VTV",
+        "file": "https://github.com/guiterhd-bit/Xiaomi-H-i-D-ng/raw/refs/heads/main/mivtv.apk"
+      },
+      {
+        "name": "Only TV",
+        "file": "https://github.com/guiterhd-bit/direct-link/raw/refs/heads/main/OnlyTV.apk"
+      },
+      {
+        "name": "OK Player",
+        "file": "https://github.com/guiterhd-bit/Xiaomi-H-i-D-ng/raw/refs/heads/main/oktv.apk"
+      },
+      {
+        "name": "M3U-Adr5",
+        "file": "https://github.com/guiterhd-bit/direct-link/raw/refs/heads/main/m3u.apk"
+      }
+    ]
+  },
+
+  {
+    "category": "🎬 Giải Trí & Thể Thao",
+    "apps": [
+      {
+        "name": "SaiGon Phim",
+        "file": "https://github.com/guiterhd-bit/Xiaomi-H-i-D-ng/raw/refs/heads/main/SaiGonPhim.apk"
+      },
+      {
+        "name": "Tiktok TV",
+        "file": "https://github.com/guiterhd-bit/Xiaomi-H-i-D-ng/raw/refs/heads/main/tiktoklite.apk"
+      },
+      {
+        "name": "Get Out 2.end",
+        "file": "https://github.com/guiterhd-bit/mihdtv/raw/refs/heads/main/getout.apk"
+      },
+      {
+        "name": "Crexify TV",
+        "file": "https://github.com/guiterhd-bit/direct-link/raw/refs/heads/main/CrexiFyTV.apk"
+      }
+    ]
+  },
+
+  {
+    "category": "🛠 Công cụ",
+    "apps": [
+      {
+        "name": "Scanner Bluetooth",
+        "file": "https://github.com/guiterhd-bit/direct-link/raw/refs/heads/main/BluetoothScanner.apk"
+      },
+      {
+        "name": "Mix Plorer",
+        "file": "https://github.com/guiterhd-bit/direct-link/raw/refs/heads/main/mix.apk"
+      },
+      {
+        "name": "Zoom TV",
+        "file": "https://github.com/guiterhd-bit/Xiaomi-H-i-D-ng/raw/refs/heads/main/Zoom.apk"
+      },
+      {
+        "name": "Super Voice",
+        "file": "https://github.com/guiterhd-bit/direct-link/raw/refs/heads/main/supervoice.apk"
+      }
+    ]
+  }
+]
