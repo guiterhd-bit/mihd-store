@@ -1,19 +1,67 @@
 [
+    {
+    "category": "📦 Kho Ứng Dụng",
+    "apps": [
+      {
+        "name": "Ms Store",
+        "version": "2.0.0",
+        "size": "12.6 MB",
+        "file": "https://github.com/guiterhd-bit/direct-link/raw/refs/heads/main/mstore.apk"
+      },
+      {
+        "name": "DL Store",
+        "version": "16.0.4",
+        "size": "3.96 MB",
+        "file": "https://github.com/guiterhd-bit/Xiaomi-H-i-D-ng/raw/refs/heads/main/smarttube.apk"
+      },
+      {
+        "name": "Smihome Store",
+        "version": "2.0",
+        "size": "3.61 MB",
+        "file": "https://github.com/guiterhd-bit/Xiaomi-H-i-D-ng/raw/refs/heads/main/youtube.apk"
+      },
+      {
+        "name": "Legend Store",
+        "version": "1.0",
+        "size": "2.96 MB",
+        "file": "https://github.com/guiterhd-bit/direct-link/raw/refs/heads/main/mlstore.apk"
+      },
+      {
+        "name": "Beecube Store",
+        "version": "3.1",
+        "size": "7. MB",
+        "file": "https://github.com/guiterhd-bit/direct-link/raw/refs/heads/main/Beecube%20Store_1.apk"
+      }
+    ]
+  },
+  
   {
     "category": "📺 Youtube Không Quảng Cáo",
     "apps": [
       {
         "name": "TizenTube TV Quốc Tế",
+        "version": "1.0.8",
+        "size": "36.8 MB",
         "file": "https://github.com/guiterhd-bit/Xiaomi-H-i-D-ng/raw/refs/heads/main/TizenTube.apk"
       },
       {
         "name": "SmartTube",
+        "version": "31.94",
+        "size": "33.2 MB",
         "file": "https://github.com/guiterhd-bit/Xiaomi-H-i-D-ng/raw/refs/heads/main/smarttube.apk"
       },
       {
         "name": "YouTube TV Nội Địa",
+        "version": "1.0.8",
+        "size": "15.5 MB",
         "file": "https://github.com/guiterhd-bit/Xiaomi-H-i-D-ng/raw/refs/heads/main/youtube.apk"
-      }
+      },
+       {
+        "name": "YouTube TV Adr5-6 ",
+        "version": "1.0.3",
+        "size": "14. MB",
+        "file": "https://github.com/guiterhd-bit/direct-link/raw/refs/heads/main/youtube-adr5-6.apk"
+      }     
     ]
   },
 
