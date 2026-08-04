@@ -73,6 +73,14 @@ function renderApps(data) {
 
                 <h3>${app.name}</h3>
 
+                <div class="info">
+
+                   📦 Phiên bản: ${app.version}<br>
+
+                   💾 Dung lượng: ${app.size}<br>
+
+                </div>
+                
                 <a
                     class="download"
                     href="${app.file}"
