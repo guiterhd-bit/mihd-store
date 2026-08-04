@@ -283,4 +283,44 @@ margin:20px auto;
 
 }
 
+/* Địa chỉ */
+
+.address{
+
+    margin-top:6px;
+
+    font-size:15px;
+
+    color:#fff;
+
+    opacity:.9;
+
+}
+   
+/* Hotline */
+
+.hotline{
+
+    margin-top:10px;
+
+    font-size:16px;
+
+    color:#fff;
+
+    font-weight:500;
+
+}
+
+.hotline a{
+
+    color:#fff;
+
+    text-decoration:none;
+
+}
+
+.hotline a:hover{
+
+    text-decoration:underline;
+
 }
