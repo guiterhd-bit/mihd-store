@@ -40,7 +40,7 @@
     "apps": [
       {
         "name": "TizenTube TV Quốc Tế",
-        "version": "1.0.8",
+        "version": "2.0.1",
         "size": "97 MB",
         "file": "https://github.com/guiterhd-bit/direct-link/raw/refs/heads/main/TizenTube.apk"
       },
@@ -59,7 +59,7 @@
        {
         "name": "YouTube TV Adr5-6 ",
         "version": "1.0.3",
-        "size": "14. MB",
+        "size": "14 MB",
         "file": "https://github.com/guiterhd-bit/direct-link/raw/refs/heads/main/youtube-adr5-6.apk"
       }     
     ]
