@@ -70,7 +70,7 @@
     "apps": [
       {
         "name": "MiHD TV",
-        "version": "1.0",
+        "version": "2.6",
         "size": "19 MB",
         "file": "https://github.com/guiterhd-bit/direct-link/raw/refs/heads/main/MiHDTV.apk"
       },
