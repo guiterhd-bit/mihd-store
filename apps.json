@@ -149,7 +149,12 @@
       {
         "name": "Super Voice",
         "file": "https://github.com/guiterhd-bit/direct-link/raw/refs/heads/main/supervoice.apk"
-      }
+      },
+      {
+        "name": "Katniss Voice",
+        "version": "7.0",
+        "size": "27 MB",
+        "file": "https://github.com/guiterhd-bit/Xiaomi-H-i-D-ng/raw/refs/heads/main/katniss.apk"
     ]
   }
 ]
