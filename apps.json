@@ -101,6 +101,12 @@
     "category": "🎬 Giải Trí & Thể Thao",
     "apps": [
       {
+        "name": "Phim 4K",
+        "version": "1.3",
+        "size": "70 MB",
+        "file": "https://github.com/guiterhd-bit/Xiaomi-H-i-D-ng/raw/refs/heads/main/Phim4K.apk"
+      },
+      {
         "name": "SaiGon Phim",
         "version": "1.3",
         "size": "70 MB",
