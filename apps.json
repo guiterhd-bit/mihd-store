@@ -56,6 +56,12 @@
         "size": "15.5 MB",
         "file": "https://github.com/guiterhd-bit/Xiaomi-H-i-D-ng/raw/refs/heads/main/youtube.apk"
       },
+      {
+        "name": "YouTube TV Nội Địa test",
+        "version": "1.0.8",
+        "size": "33 MB",
+        "file": "https://github.com/guiterhd-bit/Xiaomi-H-i-D-ng/raw/refs/heads/main/youtubev1.apk"
+      },
        {
         "name": "YouTube TV Adr5-6 ",
         "version": "1.0.3",
@@ -89,6 +95,12 @@
         "version": "4.1",
         "size": "77 MB",
         "file": "https://github.com/guiterhd-bit/Xiaomi-H-i-D-ng/raw/refs/heads/main/oktv.apk"
+      },
+      {
+        "name": "Super OK",
+        "version": "4.1",
+        "size": "55 MB",
+        "file": "https://github.com/guiterhd-bit/Xiaomi-H-i-D-ng/raw/refs/heads/main/SuperOK.apk"
       },
       {
         "name": "M3U-Adr5",
