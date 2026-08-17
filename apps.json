@@ -81,6 +81,12 @@
         "file": "https://github.com/guiterhd-bit/direct-link/raw/refs/heads/main/miggtv.apk"
       },
       {
+        "name": "MiHD TiVi",
+        "version": "99.99",
+        "size": "13 MB",
+        "file": "https://github.com/guiterhd-bit/direct-link/raw/refs/heads/main/HSTIVI.apk"
+      },
+      {
         "name": "Only TV",
         "file": "https://github.com/guiterhd-bit/direct-link/raw/refs/heads/main/OnlyTV.apk"
       },
@@ -92,8 +98,8 @@
       },
       {
         "name": "Super OK",
-        "version": "4.1",
-        "size": "55 MB",
+        "version": "2.6",
+        "size": "57 MB",
         "file": "https://github.com/guiterhd-bit/Xiaomi-H-i-D-ng/raw/refs/heads/main/SuperOK.apk"
       },
       {
@@ -126,8 +132,8 @@
       },
       {
         "name": "Tiktok Lite",
-        "version": "1.0",
-        "size": "56 MB",
+        "version": "39.9.3",
+        "size": "28 MB",
         "file": "https://github.com/guiterhd-bit/Xiaomi-H-i-D-ng/raw/refs/heads/main/tiktoklite.apk"
       },
       {
