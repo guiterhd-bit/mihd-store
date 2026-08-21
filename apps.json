@@ -46,7 +46,7 @@
     "apps": [
       {
         "name": "TizenTube TV Quốc Tế",
-        "version": "2.0.1",
+        "version": "1.0.8",
         "size": "39 MB",
         "file": "https://github.com/guiterhd-bit/Xiaomi-H-i-D-ng/raw/refs/heads/main/TizenTube.apk"
       },
@@ -137,6 +137,12 @@
         "file": "https://github.com/guiterhd-bit/direct-link/raw/refs/heads/main/chophim.apk"
       },
       {
+        "name": "Nét Căng TV",
+        "version": "0.3",
+        "size": "14 MB",
+        "file": "https://github.com/guiterhd-bit/direct-link/raw/refs/heads/main/N%C3%A9t%20C%C4%83ng.apk"
+      },
+      {
         "name": "Tiktok Lite",
         "version": "39.9.3",
         "size": "28 MB",
@@ -163,6 +169,10 @@
       {
         "name": "Scanner Bluetooth",
         "file": "https://github.com/guiterhd-bit/direct-link/raw/refs/heads/main/BluetoothScanner.apk"
+      },
+      {
+        "name": "ByeByeDPI VPN",
+        "file": "https://github.com/guiterhd-bit/direct-link/raw/refs/heads/main/ByeByeDPI-v1.7.8-arm64-v8a-release.apk"
       },
       {
         "name": "Mix Plorer",
