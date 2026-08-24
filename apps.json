@@ -87,14 +87,16 @@
         "file": "https://github.com/guiterhd-bit/direct-link/raw/refs/heads/main/miggtv.apk"
       },
       {
+        "name": "Mi Pro TV",
+        "version": "2.6",
+        "size": "17 MB",
+        "file": "https://github.com/guiterhd-bit/direct-link/raw/refs/heads/main/miprotv.apk"
+      },
+      {
         "name": "VietPlayTV",
         "version": "2.4",
         "size": "10 MB",
         "file": "https://github.com/guiterhd-bit/direct-link/raw/refs/heads/main/vietplay.apk"
-      },
-      {
-        "name": "Only TV",
-        "file": "https://github.com/guiterhd-bit/direct-link/raw/refs/heads/main/OnlyTV.apk"
       },
       {
         "name": "OK Player",
