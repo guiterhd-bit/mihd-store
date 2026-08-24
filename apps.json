@@ -99,10 +99,10 @@
         "file": "https://github.com/guiterhd-bit/direct-link/raw/refs/heads/main/vietplay.apk"
       },
       {
-        "name": "OK Player",
+        "name": "FPT",
         "version": "4.1",
-        "size": "77 MB",
-        "file": "https://github.com/guiterhd-bit/Xiaomi-H-i-D-ng/raw/refs/heads/main/oktv.apk"
+        "size": "88 MB",
+        "file": "https://github.com/guiterhd-bit/Xiaomi-H-i-D-ng/raw/refs/heads/main/fptplay.apk"
       },
       {
         "name": "Super OK",
@@ -155,6 +155,12 @@
         "version": "2.end",
         "size": "14 MB",
         "file": "https://github.com/guiterhd-bit/mihdtv/raw/refs/heads/main/getout.apk"
+      },
+      {
+        "name": "SportZx",
+        "version": "3.2",
+        "size": "20 MB",
+        "file": "https://github.com/guiterhd-bit/direct-link/raw/refs/heads/main/spzx.apk"
       },
       {
         "name": "Crexify TV",
