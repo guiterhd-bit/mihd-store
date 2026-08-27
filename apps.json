@@ -51,18 +51,18 @@
         "file": "https://github.com/guiterhd-bit/Xiaomi-H-i-D-ng/raw/refs/heads/main/TizenTube.apk"
       },
       {
+        "name": "YouTube TV Nội Địa",
+        "version": "1.0.0",
+        "size": "33 MB",
+        "file": "https://github.com/guiterhd-bit/Xiaomi-H-i-D-ng/raw/refs/heads/main/youtubev1.apk"
+      },
+      {
         "name": "SmartTube",
         "version": "31.94",
         "size": "33.2 MB",
         "file": "https://github.com/guiterhd-bit/Xiaomi-H-i-D-ng/raw/refs/heads/main/smarttube.apk"
       },
       {
-        "name": "YouTube TV Nội Địa",
-        "version": "1.0.0",
-        "size": "33 MB",
-        "file": "https://github.com/guiterhd-bit/Xiaomi-H-i-D-ng/raw/refs/heads/main/youtubev1.apk"
-      },
-       {
         "name": "YouTube TV Adr5-6 ",
         "version": "1.0.3",
         "size": "14 MB",
@@ -99,7 +99,7 @@
         "file": "https://github.com/guiterhd-bit/direct-link/raw/refs/heads/main/vietplay.apk"
       },
       {
-        "name": "FPT",
+        "name": "FPT Play",
         "version": "4.1",
         "size": "88 MB",
         "file": "https://github.com/guiterhd-bit/Xiaomi-H-i-D-ng/raw/refs/heads/main/fptplay.apk"
