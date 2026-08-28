@@ -52,9 +52,9 @@
       },
       {
         "name": "YouTube TV Nội Địa",
-        "version": "1.0.0",
-        "size": "33 MB",
-        "file": "https://github.com/guiterhd-bit/Xiaomi-H-i-D-ng/raw/refs/heads/main/youtubev1.apk"
+        "version": "1.0.8",
+        "size": "16 MB",
+        "file": "https://github.com/guiterhd-bit/direct-link/raw/refs/heads/main/youtube.apk"
       },
       {
         "name": "SmartTube",
@@ -82,7 +82,7 @@
       },
       {
         "name": "MiHDTV Google TV",
-        "version": "3.0",
+        "version": "v6",
         "size": "9 MB",
         "file": "https://github.com/guiterhd-bit/direct-link/raw/refs/heads/main/miggtv.apk"
       },
