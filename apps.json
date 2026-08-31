@@ -163,6 +163,12 @@
         "file": "https://github.com/guiterhd-bit/mihdtv/raw/refs/heads/main/getout.apk"
       },
       {
+        "name": "HongTV",
+        "version": "5.3",
+        "size": "24 MB",
+        "file": "https://github.com/guiterhd-bit/direct-link/raw/refs/heads/main/hongtv.apk"
+      },
+      {
         "name": "SportZx",
         "version": "3.2",
         "size": "20 MB",
