@@ -93,6 +93,12 @@
         "file": "https://github.com/guiterhd-bit/direct-link/raw/refs/heads/main/miprotv.apk"
       },
       {
+        "name": "XemTV",
+        "version": "v5.8.8",
+        "size": "6 MB",
+        "file": "https://github.com/guiterhd-bit/direct-link/raw/refs/heads/main/XemTV_v5.8.8.apk"
+      },
+      {
         "name": "VietPlayTV",
         "version": "2.4",
         "size": "10 MB",
