@@ -82,7 +82,7 @@
       },
       {
         "name": "MiHDTV Google TV",
-        "version": "v15",
+        "version": "v6.2",
         "size": "9 MB",
         "file": "https://github.com/guiterhd-bit/direct-link/raw/refs/heads/main/miggtv.apk"
       },
@@ -128,7 +128,7 @@
     "apps": [
       {
         "name": "Phim 4K",
-        "version": "2.6.7",
+        "version": "2.6.8",
         "size": "15 MB",
         "file": "https://github.com/guiterhd-bit/direct-link/raw/refs/heads/main/phim4k.apk"
       },
