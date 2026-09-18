@@ -1,4 +1,3 @@
-```javascript
 // ==============================
 // MiHD Store
 // script.js
