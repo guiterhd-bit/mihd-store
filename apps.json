@@ -130,43 +130,43 @@
     "apps": [
       {
         "name": "Phim 4K",
-        "version": "2.6.8",
+        "thumbnail": "https://raw.githubusercontent.com/guiterhd-bit/mihdtv/main/phim4k.png",
         "size": "15 MB",
         "file": "https://github.com/guiterhd-bit/direct-link/raw/refs/heads/main/phim4k.apk"
       },
       {
         "name": "SaiGon Phim",
-        "version": "1.3",
+        "thumbnail": "https://raw.githubusercontent.com/guiterhd-bit/mihdtv/main/saigon.png",
         "size": "70 MB",
         "file": "https://github.com/guiterhd-bit/Xiaomi-H-i-D-ng/raw/refs/heads/main/SaiGonPhim.apk"
       },
       {
         "name": "Chợ Phim",
-        "version": "1.0",
+         "thumbnail": "https://raw.githubusercontent.com/guiterhd-bit/mihdtv/main/chophim.png",
         "size": "3.8 MB",
         "file": "https://github.com/guiterhd-bit/direct-link/raw/refs/heads/main/chophim.apk"
       },
       {
         "name": "Hi Phim TV",
-        "version": "1.24",
+        "thumbnail": "https://raw.githubusercontent.com/guiterhd-bit/mihdtv/main/hiphim.png",
         "size": "6 MB",
         "file": "https://github.com/guiterhd-bit/direct-link/raw/refs/heads/main/hiphimtv.apk"
       },
       {
         "name": "Nét Căng TV",
-        "version": "0.3",
+        "thumbnail": "https://raw.githubusercontent.com/guiterhd-bit/mihdtv/main/netcang.png",
         "size": "14 MB",
         "file": "https://github.com/guiterhd-bit/direct-link/raw/refs/heads/main/N%C3%A9t%20C%C4%83ng.apk"
       },
       {
         "name": "Netflix (Cần sử dụng chuột)",
-        "version": "v1",
+        "thumbnail": "https://raw.githubusercontent.com/guiterhd-bit/mihdtv/main/netflix.png",
         "size": "70 MB",
         "file": "https://github.com/guiterhd-bit/Xiaomi-H-i-D-ng/raw/refs/heads/main/netflix.apk"
       },
       {
         "name": "Tiktok AndroidTV",
-        "version": "39.9.3",
+        "thumbnail": "https://raw.githubusercontent.com/guiterhd-bit/mihdtv/main/tiktok.png",
         "size": "28 MB",
         "file": "https://github.com/guiterhd-bit/Xiaomi-H-i-D-ng/raw/refs/heads/main/tiktoklite.apk"
       }
