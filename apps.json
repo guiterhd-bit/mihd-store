@@ -214,19 +214,19 @@
     "apps": [
       {
         "name": "Imou TV",
-        "version": "5.3",
+        "thumbnail": "https://raw.githubusercontent.com/guiterhd-bit/mihdtv/main/imou.png",
         "size": "72 MB",
         "file": "https://github.com/guiterhd-bit/Xiaomi-H-i-D-ng/raw/refs/heads/main/imou.apk"
       },
       {
         "name": "Yoosee TV",
-        "version": "3.2",
+        "thumbnail": "https://raw.githubusercontent.com/guiterhd-bit/mihdtv/main/yoosee.png",
         "size": "130 MB",
         "file": "https://github.com/guiterhd-bit/Xiaomi-H-i-D-ng/raw/refs/heads/main/yoosee.apk"
       },
       {
         "name": "Ezviz TV",
-        "version": "4.3",
+        "thumbnail": "https://raw.githubusercontent.com/guiterhd-bit/mihdtv/main/ezviz.png",
         "size": "87 MB",
         "file": "https://github.com/guiterhd-bit/Xiaomi-H-i-D-ng/raw/refs/heads/main/ezviz.apk"
       }
@@ -238,43 +238,39 @@
     "apps": [
       {
         "name": "Scanner Bluetooth",
+        "thumbnail": "https://raw.githubusercontent.com/guiterhd-bit/mihdtv/main/blt.png",
+        "size": "27 MB",
         "file": "https://github.com/guiterhd-bit/direct-link/raw/refs/heads/main/BluetoothScanner.apk"
       },
       {
         "name": "Projectivy Launcher",
-        "version": "4.71",
+        "thumbnail": "https://raw.githubusercontent.com/guiterhd-bit/mihdtv/main/project.png",
         "size": "16 MB",
         "file": "https://github.com/guiterhd-bit/direct-link/raw/refs/heads/main/project.apk"
       },
       {
         "name": "Mix Plorer",
-        "version": "4.71",
+        "thumbnail": "https://raw.githubusercontent.com/guiterhd-bit/mihdtv/main/mix.png",
         "size": "16 MB",
         "file": "https://github.com/guiterhd-bit/direct-link/raw/refs/heads/main/mix.apk"
       },
       {
         "name": "Cốc Cốc TV",
-        "version": "4.71",
+        "thumbnail": "https://raw.githubusercontent.com/guiterhd-bit/mihdtv/main/coccoc.png",
         "size": "86 MB",
         "file": "https://github.com/guiterhd-bit/Xiaomi-H-i-D-ng/raw/refs/heads/main/coccoc.apk"
       },
       {
         "name": "Zoom TV",
-        "version": "4.71",
+        "thumbnail": "https://raw.githubusercontent.com/guiterhd-bit/mihdtv/main/zoom.png",
         "size": "16 MB",
         "file": "https://github.com/guiterhd-bit/Xiaomi-H-i-D-ng/raw/refs/heads/main/Zoom.apk"
       },
       {
         "name": "Super Voice",
-        "version": "4.71",
+        "thumbnail": "https://raw.githubusercontent.com/guiterhd-bit/mihdtv/main/supervoice.png",
         "size": "16 MB",
         "file": "https://github.com/guiterhd-bit/direct-link/raw/refs/heads/main/supervoice.apk"
-      },
-      {
-        "name": "Katniss Voice",
-        "version": "7.0",
-        "size": "27 MB",
-        "file": "https://github.com/guiterhd-bit/mihdtv/raw/refs/heads/main/MiHDTV.apk"
       }
     ]
   }
