@@ -1,7 +1,13 @@
-/* =========================================
+```css
+/* ==================================================
    Xiaomi Hải Dương Store
    style.css
-   ========================================= */
+   ================================================== */
+
+
+/* ==================================================
+   RESET
+   ================================================== */
 
 * {
     margin: 0;
@@ -9,39 +15,48 @@
     box-sizing: border-box;
 }
 
+
 html {
     scroll-behavior: smooth;
 }
 
+
 body {
-    font-family: "Be Vietnam Pro", sans-serif;
+    font-family: "Be Vietnam Pro", Arial, sans-serif;
+
     background: #f6f6f6;
+
     color: #222;
+
     min-height: 100vh;
+
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
 }
 
 
-/* =========================================
+/* ==================================================
    HEADER
-   ========================================= */
+   ================================================== */
 
 .header {
+
     width: 100%;
 
     background:
         linear-gradient(
             135deg,
             #ffb300 0%,
-            #ff9800 48%,
+            #ff9800 50%,
             #f57c00 100%
         );
 
-    color: #fff;
+    color: #ffffff;
 
     text-align: center;
 
     padding:
-        55px 20px 80px;
+        58px 24px 88px;
 
     position: relative;
 
@@ -49,9 +64,10 @@ body {
 }
 
 
-/* hiệu ứng ánh sáng nhẹ */
+/* Ánh sáng trang trí */
 
 .header::before {
+
     content: "";
 
     position: absolute;
@@ -62,150 +78,184 @@ body {
     border-radius: 50%;
 
     background:
-        rgba(255,255,255,0.08);
+        rgba(255, 255, 255, 0.08);
 
-    top: -220px;
-    left: -120px;
+    top: -230px;
+    left: -130px;
+
+    pointer-events: none;
 }
 
+
 .header::after {
+
     content: "";
 
     position: absolute;
 
-    width: 380px;
-    height: 380px;
+    width: 400px;
+    height: 400px;
 
     border-radius: 50%;
 
     background:
-        rgba(255,255,255,0.07);
+        rgba(255, 255, 255, 0.07);
 
-    right: -130px;
-    bottom: -240px;
+    right: -150px;
+    bottom: -250px;
+
+    pointer-events: none;
 }
 
 
+/* Nội dung header */
+
 .header-content {
+
     position: relative;
 
     z-index: 2;
 
-    max-width: 1000px;
+    max-width: 1200px;
 
     margin: 0 auto;
 }
 
 
-/* =========================================
-   TITLE
-   ========================================= */
+/* ==================================================
+   STORE TITLE
+   ================================================== */
 
-.header h1 {
-    font-size: 60px;
+.store-title {
+
+    font-family:
+        "Be Vietnam Pro",
+        Arial,
+        sans-serif;
+
+    font-size: 52px;
 
     font-weight: 800;
 
-    letter-spacing: -0.5px;
-
     line-height: 1.2;
 
-    margin-bottom: 14px;
+    letter-spacing: -1px;
+
+    color: #ffffff;
+
+    margin: 0 0 18px;
+
+    text-align: center;
 
     text-shadow:
-        0 2px 8px rgba(
-            0,
-            0,
-            0,
-            0.12
-        );
+        0 2px 8px
+        rgba(0, 0, 0, 0.12);
 }
 
 
-/* =========================================
+/* ==================================================
    ADDRESS
-   ========================================= */
+   ================================================== */
 
 .address {
-    font-size: 25px;
 
-    line-height: 1.6;
+    font-family:
+        "Be Vietnam Pro",
+        Arial,
+        sans-serif;
+
+    font-size: 18px;
 
     font-weight: 400;
 
-    opacity: 0.98;
+    line-height: 1.6;
+
+    color: #ffffff;
+
+    margin-bottom: 5px;
 }
 
 
-/* =========================================
+/* ==================================================
    HOTLINE
-   ========================================= */
+   ================================================== */
 
 .hotline {
-    font-size: 25px;
+
+    font-family:
+        "Be Vietnam Pro",
+        Arial,
+        sans-serif;
+
+    font-size: 18px;
+
+    font-weight: 600;
 
     line-height: 1.6;
 
-    font-weight: 400;
-
-    opacity: 0.98;
+    color: #ffffff;
 }
 
 
-/* =========================================
+/* ==================================================
    SEARCH BOX
-   ========================================= */
+   ================================================== */
 
 .search-box {
+
     width: 100%;
 
-    max-width: 900px;
+    max-width: 950px;
 
     margin:
-        -38px auto 0;
+        -40px auto 0;
 
     padding:
         0 20px;
 
     position: relative;
 
-    z-index: 10;
+    z-index: 20;
 }
 
 
-/* =========================================
+/* ==================================================
    SEARCH INPUT
-   ========================================= */
+   ================================================== */
 
 #search {
+
     display: block;
 
     width: 100%;
 
-    height: 64px;
+    height: 66px;
+
+    padding:
+        0 30px;
 
     border: none;
 
     border-radius: 34px;
 
-    padding:
-        0 28px;
+    background: #ffffff;
 
-    background: #fff;
+    color: #222222;
 
-    color: #222;
+    font-family:
+        "Be Vietnam Pro",
+        Arial,
+        sans-serif;
 
     font-size: 17px;
+
+    font-weight: 400;
 
     outline: none;
 
     box-shadow:
-        0 8px 28px rgba(
-            0,
-            0,
-            0,
-            0.16
-        );
+        0 8px 28px
+        rgba(0, 0, 0, 0.15);
 
     transition:
         box-shadow 0.2s ease,
@@ -213,103 +263,100 @@ body {
 }
 
 
-#search:hover {
-    box-shadow:
-        0 10px 30px rgba(
-            0,
-            0,
-            0,
-            0.18
-        );
+#search::placeholder {
+
+    color: #999999;
+
+    opacity: 1;
 }
 
 
 #search:focus {
+
     transform:
         translateY(-1px);
 
     box-shadow:
-        0 12px 34px rgba(
-            0,
-            0,
-            0,
-            0.20
-        );
+        0 12px 35px
+        rgba(0, 0, 0, 0.20);
 }
 
 
-#search::placeholder {
-    color: #999;
-}
-
-
-/* =========================================
+/* ==================================================
    APP CONTAINER
-   ========================================= */
+   ================================================== */
 
 #appContainer {
+
     width: 100%;
 
-    max-width: 1450px;
+    max-width: 1500px;
 
     margin: 0 auto;
 
     padding:
-        55px 30px 60px;
+        60px 30px 70px;
 }
 
 
-/* =========================================
+/* ==================================================
    CATEGORY
-   ========================================= */
+   ================================================== */
 
 .category {
-    margin-bottom: 42px;
+
+    margin-bottom: 45px;
 }
 
 
-/* =========================================
+/* ==================================================
    CATEGORY TITLE
-   ========================================= */
+   ================================================== */
 
 .category-title {
-    font-size: 25px;
 
-    font-weight: 750;
+    font-family:
+        "Be Vietnam Pro",
+        Arial,
+        sans-serif;
 
-    color: #222;
+    font-size: 26px;
 
-    margin-bottom: 20px;
+    font-weight: 700;
+
+    line-height: 1.35;
+
+    color: #222222;
+
+    margin:
+        0 0 20px;
 
     padding-left: 4px;
-
-    line-height: 1.3;
 }
 
 
-/* =========================================
-   GRID
-   ========================================= */
+/* ==================================================
+   APP GRID
+   ================================================== */
 
 .grid {
+
     display: grid;
 
     grid-template-columns:
-        repeat(
-            5,
-            minmax(0, 1fr)
-        );
+        repeat(5, minmax(0, 1fr));
 
-    gap: 22px;
+    gap: 24px;
 }
 
 
-/* =========================================
+/* ==================================================
    APP CARD
-   ========================================= */
+   ================================================== */
 
 .card {
-    background: #fff;
+
+    background: #ffffff;
 
     border:
         1px solid #e9e9e9;
@@ -323,43 +370,37 @@ body {
     flex-direction: column;
 
     box-shadow:
-        0 4px 15px rgba(
-            0,
-            0,
-            0,
-            0.055
-        );
+        0 4px 15px
+        rgba(0, 0, 0, 0.055);
 
     transition:
-        transform 0.22s ease,
-        box-shadow 0.22s ease;
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
 
 .card:hover {
+
     transform:
         translateY(-5px);
 
     box-shadow:
-        0 12px 30px rgba(
-            0,
-            0,
-            0,
-            0.12
-        );
+        0 12px 30px
+        rgba(0, 0, 0, 0.12);
 }
 
 
-/* =========================================
+/* ==================================================
    THUMBNAIL
-   ========================================= */
+   ================================================== */
 
 .thumbnail-box {
+
     width: 100%;
 
     aspect-ratio: 16 / 9;
 
-    background: #eee;
+    background: #eeeeee;
 
     overflow: hidden;
 
@@ -372,6 +413,7 @@ body {
 
 
 .thumbnail {
+
     width: 100%;
 
     height: 100%;
@@ -386,16 +428,18 @@ body {
 
 
 .card:hover .thumbnail {
+
     transform:
         scale(1.035);
 }
 
 
-/* =========================================
+/* ==================================================
    CARD CONTENT
-   ========================================= */
+   ================================================== */
 
 .card-content {
+
     padding: 17px;
 
     display: flex;
@@ -406,30 +450,37 @@ body {
 }
 
 
-/* =========================================
+/* ==================================================
    APP NAME
-   ========================================= */
+   ================================================== */
 
 .app-name {
+
+    font-family:
+        "Be Vietnam Pro",
+        Arial,
+        sans-serif;
+
     font-size: 18px;
 
     font-weight: 700;
 
-    color: #222;
+    line-height: 1.4;
 
-    line-height: 1.35;
+    color: #222222;
 
-    min-height: 48px;
+    min-height: 50px;
 
     margin-bottom: 10px;
 }
 
 
-/* =========================================
-   APP INFO
-   ========================================= */
+/* ==================================================
+   APP INFORMATION
+   ================================================== */
 
 .app-info {
+
     display: flex;
 
     flex-direction: column;
@@ -438,11 +489,19 @@ body {
 
     margin-bottom: 16px;
 
+    font-family:
+        "Be Vietnam Pro",
+        Arial,
+        sans-serif;
+
     font-size: 14px;
+
+    line-height: 1.5;
 }
 
 
 .download-count {
+
     color: #ef6c00;
 
     font-weight: 600;
@@ -450,18 +509,22 @@ body {
 
 
 .app-size {
-    color: #777;
+
+    color: #777777;
+
+    font-weight: 400;
 }
 
 
-/* =========================================
+/* ==================================================
    DOWNLOAD BUTTON
-   ========================================= */
+   ================================================== */
 
 .download {
+
     width: 100%;
 
-    min-height: 45px;
+    min-height: 46px;
 
     display: flex;
 
@@ -476,11 +539,16 @@ body {
             #f57c00
         );
 
-    color: #fff;
+    color: #ffffff;
 
     border-radius: 10px;
 
     text-decoration: none;
+
+    font-family:
+        "Be Vietnam Pro",
+        Arial,
+        sans-serif;
 
     font-size: 15px;
 
@@ -494,30 +562,29 @@ body {
 
 
 .download:hover {
+
     filter:
         brightness(1.06);
 
     box-shadow:
-        0 5px 15px rgba(
-            245,
-            124,
-            0,
-            0.25
-        );
+        0 5px 15px
+        rgba(245, 124, 0, 0.25);
 }
 
 
 .download:active {
+
     transform:
         scale(0.97);
 }
 
 
-/* =========================================
+/* ==================================================
    LOADING
-   ========================================= */
+   ================================================== */
 
 .loading {
+
     min-height: 220px;
 
     display: flex;
@@ -530,13 +597,14 @@ body {
 
     gap: 14px;
 
-    color: #777;
+    color: #777777;
 
     font-size: 15px;
 }
 
 
 .loading-spinner {
+
     width: 38px;
 
     height: 38px;
@@ -563,11 +631,12 @@ body {
 }
 
 
-/* =========================================
-   EMPTY / SEARCH RESULT
-   ========================================= */
+/* ==================================================
+   EMPTY
+   ================================================== */
 
 .empty {
+
     min-height: 250px;
 
     display: flex;
@@ -580,11 +649,12 @@ body {
 
     text-align: center;
 
-    color: #777;
+    color: #777777;
 }
 
 
 .empty-icon {
+
     font-size: 42px;
 
     margin-bottom: 12px;
@@ -592,31 +662,34 @@ body {
 
 
 .empty-title {
+
     font-size: 20px;
 
     font-weight: 700;
 
-    color: #333;
+    color: #333333;
 
     margin-bottom: 7px;
 }
 
 
 .empty-text {
+
     font-size: 14px;
 
-    color: #888;
+    color: #888888;
 }
 
 
-/* =========================================
+/* ==================================================
    FOOTER
-   ========================================= */
+   ================================================== */
 
 footer {
+
     width: 100%;
 
-    background: #fff;
+    background: #ffffff;
 
     border-top:
         1px solid #e9e9e9;
@@ -624,6 +697,7 @@ footer {
 
 
 .footer {
+
     max-width: 1200px;
 
     margin: 0 auto;
@@ -633,7 +707,12 @@ footer {
 
     text-align: center;
 
-    color: #888;
+    color: #888888;
+
+    font-family:
+        "Be Vietnam Pro",
+        Arial,
+        sans-serif;
 
     font-size: 13px;
 
@@ -642,108 +721,130 @@ footer {
 
 
 .footer p:first-child {
-    color: #666;
+
+    color: #666666;
 
     font-weight: 600;
 }
 
 
-/* =========================================
+/* ==================================================
    TABLET
-   ========================================= */
+   ================================================== */
 
 @media (max-width: 1100px) {
 
-    .grid {
-        grid-template-columns:
-            repeat(
-                4,
-                minmax(0, 1fr)
-            );
-
-        gap: 18px;
-    }
-
-    .header h1 {
-        font-size: 36px;
-    }
-
-    #appContainer {
-        padding:
-            50px 22px;
-    }
-}
-
-
-/* =========================================
-   TABLET NHỎ
-   ========================================= */
-
-@media (max-width: 850px) {
-
-    .grid {
-        grid-template-columns:
-            repeat(
-                3,
-                minmax(0, 1fr)
-            );
-    }
-
-    .header {
-        padding:
-            45px 18px 70px;
-    }
-
-    .header h1 {
-        font-size: 32px;
+    .store-title {
+        font-size: 42px;
     }
 
     .address,
     .hotline {
-        font-size: 15px;
+        font-size: 16px;
     }
 
-    #search {
-        height: 58px;
+    .grid {
 
-        font-size: 16px;
+        grid-template-columns:
+            repeat(4, minmax(0, 1fr));
+
+        gap: 18px;
+    }
+
+    #appContainer {
+
+        padding:
+            55px 22px 60px;
     }
 }
 
 
-/* =========================================
+/* ==================================================
+   TABLET NHỎ
+   ================================================== */
+
+@media (max-width: 850px) {
+
+    .header {
+
+        padding:
+            45px 18px 72px;
+    }
+
+    .store-title {
+
+        font-size: 36px;
+
+        letter-spacing:
+            -0.5px;
+    }
+
+    .address,
+    .hotline {
+
+        font-size: 15px;
+    }
+
+    .grid {
+
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+    }
+
+    #search {
+
+        height: 58px;
+
+        font-size: 16px;
+
+        padding:
+            0 24px;
+    }
+}
+
+
+/* ==================================================
    MOBILE
-   ========================================= */
+   ================================================== */
 
 @media (max-width: 600px) {
 
     .header {
+
         padding:
-            38px 15px 62px;
+            38px 15px 64px;
     }
 
-    .header h1 {
-        font-size: 27px;
+    .store-title {
+
+        font-size: 28px;
+
+        line-height: 1.25;
+
+        letter-spacing: 0;
 
         margin-bottom: 12px;
     }
 
     .address,
     .hotline {
+
         font-size: 13px;
 
         line-height: 1.5;
     }
 
     .search-box {
+
         padding:
             0 14px;
 
         margin-top:
-            -30px;
+            -31px;
     }
 
     #search {
+
         height: 52px;
 
         padding:
@@ -755,39 +856,43 @@ footer {
     }
 
     #appContainer {
+
         padding:
             42px 12px 45px;
     }
 
     .category {
+
         margin-bottom: 32px;
     }
 
     .category-title {
+
         font-size: 21px;
 
         margin-bottom: 15px;
     }
 
     .grid {
+
         grid-template-columns:
-            repeat(
-                2,
-                minmax(0, 1fr)
-            );
+            repeat(2, minmax(0, 1fr));
 
         gap: 12px;
     }
 
     .card {
+
         border-radius: 13px;
     }
 
     .card-content {
+
         padding: 12px;
     }
 
     .app-name {
+
         font-size: 15px;
 
         min-height: 42px;
@@ -796,6 +901,7 @@ footer {
     }
 
     .app-info {
+
         font-size: 12px;
 
         margin-bottom: 12px;
@@ -804,6 +910,7 @@ footer {
     }
 
     .download {
+
         min-height: 40px;
 
         font-size: 13px;
@@ -813,105 +920,124 @@ footer {
 }
 
 
-/* =========================================
-   ĐIỆN THOẠI RẤT NHỎ
-   ========================================= */
+/* ==================================================
+   MÀN HÌNH RẤT NHỎ
+   ================================================== */
 
 @media (max-width: 380px) {
 
     .grid {
+
         grid-template-columns:
             1fr;
     }
 
-    .header h1 {
+    .store-title {
+
         font-size: 25px;
     }
 }
 
 
-/* =========================================
+/* ==================================================
    ANDROID TV / MÀN HÌNH LỚN
-   ========================================= */
+   ================================================== */
 
 @media (min-width: 1600px) {
 
     .header {
+
         padding:
-            70px 30px 95px;
+            75px 30px 100px;
     }
 
-    .header h1 {
-        font-size: 48px;
+    .store-title {
+
+        font-size: 58px;
+
+        letter-spacing:
+            -1.2px;
     }
 
     .address,
     .hotline {
-        font-size: 18px;
+
+        font-size: 20px;
     }
 
     .search-box {
-        max-width: 1000px;
+
+        max-width: 1050px;
 
         margin-top:
-            -45px;
+            -48px;
     }
 
     #search {
-        height: 70px;
 
-        font-size: 19px;
+        height: 72px;
+
+        font-size: 20px;
 
         padding:
-            0 32px;
+            0 34px;
     }
 
     #appContainer {
-        max-width: 1550px;
+
+        max-width: 1600px;
 
         padding:
-            65px 30px 70px;
+            70px 30px 80px;
     }
 
     .category-title {
-        font-size: 28px;
 
-        margin-bottom: 22px;
+        font-size: 30px;
+
+        margin-bottom: 24px;
     }
 
     .grid {
-        grid-template-columns:
-            repeat(
-                5,
-                minmax(0, 1fr)
-            );
 
-        gap: 25px;
+        grid-template-columns:
+            repeat(5, minmax(0, 1fr));
+
+        gap: 26px;
     }
 
     .card {
+
         border-radius: 19px;
     }
 
     .card-content {
-        padding: 19px;
+
+        padding: 20px;
     }
 
     .app-name {
+
         font-size: 20px;
+
+        min-height: 55px;
     }
 
     .app-info {
+
         font-size: 15px;
     }
 
     .download {
-        min-height: 50px;
+
+        min-height: 52px;
 
         font-size: 17px;
     }
 
     .footer {
+
         font-size: 14px;
     }
 }
+```
