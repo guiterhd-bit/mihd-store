@@ -46,25 +46,25 @@
     "apps": [
       {
         "name": "TizenTube TV Quốc Tế",
-        "version": "1.0.8",
+        "thumbnail": "https://raw.githubusercontent.com/guiterhd-bit/mihdtv/main/youtube.png",
         "size": "39 MB",
         "file": "https://github.com/guiterhd-bit/Xiaomi-H-i-D-ng/raw/refs/heads/main/TizenTube.apk"
       },
       {
         "name": "YouTube TV Nội Địa",
-        "version": "1.0.8",
+        "thumbnail": "https://raw.githubusercontent.com/guiterhd-bit/mihdtv/main/youtube.png",
         "size": "16 MB",
         "file": "https://github.com/guiterhd-bit/Xiaomi-H-i-D-ng/raw/refs/heads/main/youtube.apk"
       },
       {
         "name": "SmartTube",
-        "version": "31.94",
+        "thumbnail": "https://raw.githubusercontent.com/guiterhd-bit/mihdtv/main/smarttube.png",
         "size": "33.2 MB",
         "file": "https://github.com/guiterhd-bit/Xiaomi-H-i-D-ng/raw/refs/heads/main/smarttube.apk"
       },
       {
         "name": "YouTube TV Adr5-6 ",
-        "version": "1.0.3",
+          "thumbnail": "https://raw.githubusercontent.com/guiterhd-bit/mihdtv/main/youtube.png",
         "size": "14 MB",
         "file": "https://github.com/guiterhd-bit/direct-link/raw/refs/heads/main/youtube-adr5-6.apk"
       }     
