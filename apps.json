@@ -157,7 +157,13 @@
         "file": "https://github.com/guiterhd-bit/direct-link/raw/refs/heads/main/N%C3%A9t%20C%C4%83ng.apk"
       },
       {
-        "name": "Tiktok Lite",
+        "name": "Netflix (Cần sử dụng chuột)",
+        "version": "v1",
+        "size": "70 MB",
+        "file": "https://github.com/guiterhd-bit/Xiaomi-H-i-D-ng/raw/refs/heads/main/netflix.apk"
+      },
+      {
+        "name": "Tiktok AndroidTV",
         "version": "39.9.3",
         "size": "28 MB",
         "file": "https://github.com/guiterhd-bit/Xiaomi-H-i-D-ng/raw/refs/heads/main/tiktoklite.apk"
@@ -202,6 +208,30 @@
   },
 
   {
+    "category": "📷 Camera An Ninh",
+    "apps": [
+      {
+        "name": "Imou TV",
+        "version": "5.3",
+        "size": "72 MB",
+        "file": "https://github.com/guiterhd-bit/Xiaomi-H-i-D-ng/raw/refs/heads/main/imou.apk"
+      },
+      {
+        "name": "Yoosee TV",
+        "version": "3.2",
+        "size": "130 MB",
+        "file": "https://github.com/guiterhd-bit/Xiaomi-H-i-D-ng/raw/refs/heads/main/yoosee.apk"
+      },
+      {
+        "name": "Ezviz TV",
+        "version": "4.3",
+        "size": "87 MB",
+        "file": "https://github.com/guiterhd-bit/Xiaomi-H-i-D-ng/raw/refs/heads/main/ezviz.apk"
+      }
+    ]
+  },
+    
+  {
     "category": "⚙️ Ứng dụng Tiện Ích",
     "apps": [
       {
@@ -216,14 +246,26 @@
       },
       {
         "name": "Mix Plorer",
+        "version": "4.71",
+        "size": "16 MB",
         "file": "https://github.com/guiterhd-bit/direct-link/raw/refs/heads/main/mix.apk"
       },
       {
+        "name": "Cốc Cốc ",
+        "version": "4.71",
+        "size": "86 MB",
+        "file": "https://github.com/guiterhd-bit/Xiaomi-H-i-D-ng/raw/refs/heads/main/coccoc.apk"
+      },
+      {
         "name": "Zoom TV",
+        "version": "4.71",
+        "size": "16 MB",
         "file": "https://github.com/guiterhd-bit/Xiaomi-H-i-D-ng/raw/refs/heads/main/Zoom.apk"
       },
       {
         "name": "Super Voice",
+        "version": "4.71",
+        "size": "16 MB",
         "file": "https://github.com/guiterhd-bit/direct-link/raw/refs/heads/main/supervoice.apk"
       },
       {
