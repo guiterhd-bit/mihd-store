@@ -4,37 +4,37 @@
     "apps": [
       {
         "name": "Ms Store",
-        "version": "2.0.0",
+        "thumbnail": "https://raw.githubusercontent.com/guiterhd-bit/mihdtv/main/mstore2.png",
         "size": "12.6 MB",
         "file": "https://github.com/guiterhd-bit/direct-link/raw/refs/heads/main/mstore.apk"
       },
       {
         "name": "DL Store",
-        "version": "16.0.4",
+        "thumbnail": "https://raw.githubusercontent.com/guiterhd-bit/mihdtv/main/dlstore.png",
         "size": "3.96 MB",
         "file": "https://github.com/guiterhd-bit/direct-link/raw/refs/heads/main/DLStore_v16.0.4.apk"
       },
       {
         "name": "Đông Anh Store",
-        "version": "25.2",
+        "thumbnail": "https://raw.githubusercontent.com/guiterhd-bit/mihdtv/main/dastore.png",
         "size": "3 MB",
         "file": "https://github.com/guiterhd-bit/direct-link/raw/refs/heads/main/DongAnhStore.apk"
       },
       {
         "name": "Smihome Store",
-        "version": "2.0",
+        "thumbnail": "https://raw.githubusercontent.com/guiterhd-bit/mihdtv/main/smihomestore.png",
         "size": "3.61 MB",
         "file": "https://github.com/guiterhd-bit/direct-link/raw/refs/heads/main/SMihomeStore.apk"
       },
       {
-        "name": "Legend Store",
-        "version": "1.0",
+        "name": "Movie Legend Store",
+        "thumbnail": "https://raw.githubusercontent.com/guiterhd-bit/mihdtv/main/mlstore.png",
         "size": "2.96 MB",
         "file": "https://github.com/guiterhd-bit/direct-link/raw/refs/heads/main/mlstore.apk"
       },
       {
         "name": "Beecube Store",
-        "version": "3.1",
+        "thumbnail": "https://raw.githubusercontent.com/guiterhd-bit/mihdtv/main/beecube.png",
         "size": "7 MB",
         "file": "https://github.com/guiterhd-bit/direct-link/raw/refs/heads/main/Beecube%20Store_1.apk"
       }
