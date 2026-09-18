@@ -1,3 +1,4 @@
+```javascript
 // ==============================
 // MiHD Store
 // script.js
@@ -8,6 +9,7 @@ let appData = [];
 const container = document.getElementById("appContainer");
 const searchInput = document.getElementById("search");
 
+
 // ==============================
 // Cấu hình CounterAPI
 // ==============================
@@ -16,10 +18,19 @@ const COUNTER_NAMESPACE = "mihd-store";
 
 
 // ==============================
+// Thumbnail mặc định
+// ==============================
+
+const DEFAULT_THUMBNAIL =
+    "https://raw.githubusercontent.com/guiterhd-bit/mihdtv/main/mstore2.png";
+
+
+// ==============================
 // Escape HTML
 // ==============================
 
 function escapeHTML(value) {
+
     if (value === null || value === undefined) {
         return "";
     }
@@ -38,6 +49,7 @@ function escapeHTML(value) {
 // ==============================
 
 function escapeAttribute(value) {
+
     if (value === null || value === undefined) {
         return "";
     }
@@ -51,7 +63,25 @@ function escapeAttribute(value) {
 
 
 // ==============================
-// Tải số lượt tải
+// Tạo App ID
+// ==============================
+
+function getAppId(app) {
+
+    if (app.id) {
+        return String(app.id);
+    }
+
+    return String(app.name || "app")
+        .toLowerCase()
+        .trim()
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/^-+|-+$/g, "");
+}
+
+
+// ==============================
+// Lấy số lượt tải
 // ==============================
 
 async function getDownloadCount(appId) {
@@ -67,7 +97,9 @@ async function getDownloadCount(appId) {
         });
 
         if (!response.ok) {
-            throw new Error("Counter API error");
+            throw new Error(
+                `CounterAPI HTTP ${response.status}`
+            );
         }
 
         const data = await response.json();
@@ -103,7 +135,9 @@ async function increaseDownloadCount(appId) {
         });
 
         if (!response.ok) {
-            throw new Error("Counter API error");
+            throw new Error(
+                `CounterAPI HTTP ${response.status}`
+            );
         }
 
         const data = await response.json();
@@ -132,36 +166,14 @@ async function loadDownloadCount(appId, element) {
         return;
     }
 
-    element.textContent = "⬇ 0 lượt tải";
+    element.textContent =
+        "⬇ Đang tải...";
 
-    const count = await getDownloadCount(appId);
+    const count =
+        await getDownloadCount(appId);
 
     element.textContent =
         `⬇ ${count.toLocaleString("vi-VN")} lượt tải`;
-}
-
-
-// ==============================
-// Xử lý khi bấm tải
-// ==============================
-
-async function handleDownload(app, downloadButton, countElement) {
-
-    if (!app || !app.file) {
-        return;
-    }
-
-    // Mở APK trước
-    window.open(app.file, "_blank", "noopener,noreferrer");
-
-    // Tăng lượt tải
-    const newCount = await increaseDownloadCount(app.id);
-
-    if (newCount !== null && countElement) {
-
-        countElement.textContent =
-            `⬇ ${newCount.toLocaleString("vi-VN")} lượt tải`;
-    }
 }
 
 
@@ -171,19 +183,32 @@ async function handleDownload(app, downloadButton, countElement) {
 
 function createAppCard(app) {
 
-    const card = document.createElement("div");
+    const card =
+        document.createElement("div");
 
     card.className = "card";
 
+
+    // ==========================
+    // ID ứng dụng
+    // ==========================
+
     const appId =
-        app.id ||
-        app.name
-            .toLowerCase()
-            .replace(/[^a-z0-9]+/g, "-");
+        getAppId(app);
+
+
+    // ==========================
+    // Thumbnail
+    // ==========================
 
     const thumbnail =
         app.thumbnail ||
-        "https://raw.githubusercontent.com/guiterhd-bit/mihdtv/main/mstore2.png";
+        DEFAULT_THUMBNAIL;
+
+
+    // ==========================
+    // HTML Card
+    // ==========================
 
     card.innerHTML = `
         <div class="thumbnail-box">
@@ -193,10 +218,10 @@ function createAppCard(app) {
                 src="${escapeAttribute(thumbnail)}"
                 alt="${escapeAttribute(app.name)}"
                 loading="lazy"
-                onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/guiterhd-bit/mihdtv/main/mstore2.png';"
             >
 
         </div>
+
 
         <div class="card-content">
 
@@ -204,19 +229,28 @@ function createAppCard(app) {
                 ${escapeHTML(app.name)}
             </h3>
 
+
             <div class="app-info">
 
                 <span
                     class="download-count"
                     data-app-id="${escapeAttribute(appId)}">
-                    ⬇ 0 lượt tải
+
+                    ⬇ Đang tải...
+
                 </span>
 
+
                 <span class="app-size">
-                    💾 ${escapeHTML(app.size || "Không rõ")}
+
+                    💾 ${escapeHTML(
+                        app.size || "Không rõ"
+                    )}
+
                 </span>
 
             </div>
+
 
             <a
                 class="download"
@@ -231,22 +265,61 @@ function createAppCard(app) {
         </div>
     `;
 
+
+    // ==============================
+    // Lấy phần tử
+    // ==============================
+
+    const image =
+        card.querySelector(".thumbnail");
+
     const countElement =
         card.querySelector(".download-count");
 
     const downloadButton =
         card.querySelector(".download");
 
-    // Tải lượt tải hiện tại
+
+    // ==============================
+    // Xử lý ảnh lỗi
+    // ==============================
+
+    image.addEventListener(
+        "error",
+        function () {
+
+            if (
+                image.src !==
+                DEFAULT_THUMBNAIL
+            ) {
+
+                image.src =
+                    DEFAULT_THUMBNAIL;
+            }
+
+        }
+    );
+
+
+    // ==============================
+    // Tải số lượt tải hiện tại
+    // ==============================
+
     loadDownloadCount(
         appId,
         countElement
     );
 
-    // Xử lý click
+
+    // ==============================
+    // Nút Tải về
+    // ==============================
+
     downloadButton.addEventListener(
         "click",
         async function (event) {
+
+            // Kiểm tra link APK
 
             if (!app.file) {
 
@@ -259,9 +332,41 @@ function createAppCard(app) {
                 return;
             }
 
-            // Không ngăn trình duyệt mở link
+
+            // Ngăn trình duyệt mở link ngay
+
+            event.preventDefault();
+
+
+            // Lưu nội dung nút
+
+            const originalText =
+                downloadButton.innerHTML;
+
+
+            // Hiển thị trạng thái
+
+            downloadButton.innerHTML =
+                "⏳ Đang xử lý...";
+
+
+            downloadButton.style.pointerEvents =
+                "none";
+
+
+            // ==========================
+            // Tăng lượt tải
+            // ==========================
+
             const newCount =
-                await increaseDownloadCount(appId);
+                await increaseDownloadCount(
+                    appId
+                );
+
+
+            // ==========================
+            // Cập nhật số lượt tải
+            // ==========================
 
             if (
                 newCount !== null &&
@@ -271,8 +376,32 @@ function createAppCard(app) {
                 countElement.textContent =
                     `⬇ ${newCount.toLocaleString("vi-VN")} lượt tải`;
             }
+
+
+            // ==========================
+            // Khôi phục nút
+            // ==========================
+
+            downloadButton.innerHTML =
+                originalText;
+
+            downloadButton.style.pointerEvents =
+                "";
+
+
+            // ==========================
+            // Mở link APK
+            // ==========================
+
+            window.open(
+                app.file,
+                "_blank",
+                "noopener,noreferrer"
+            );
+
         }
     );
+
 
     return card;
 }
@@ -288,6 +417,11 @@ function renderApps(data) {
 
     let hasResult = false;
 
+
+    // ==============================
+    // Duyệt danh mục
+    // ==============================
+
     data.forEach(category => {
 
         if (
@@ -298,12 +432,17 @@ function renderApps(data) {
             return;
         }
 
-        hasResult = true;
+
+        // ==========================
+        // Tạo Category
+        // ==========================
 
         const section =
             document.createElement("section");
 
-        section.className = "category";
+        section.className =
+            "category";
+
 
         section.innerHTML = `
             <h2 class="category-title">
@@ -313,26 +452,54 @@ function renderApps(data) {
             <div class="grid"></div>
         `;
 
+
         const grid =
             section.querySelector(".grid");
 
+
+        // ==========================
+        // Thêm ứng dụng
+        // ==========================
+
         category.apps.forEach(app => {
 
-            if (!app || !app.name) {
+            if (
+                !app ||
+                !app.name
+            ) {
                 return;
             }
+
+
+            hasResult = true;
+
 
             const card =
                 createAppCard(app);
 
+
             grid.appendChild(card);
+
         });
 
-        container.appendChild(section);
+
+        // Chỉ thêm category
+        // nếu có ứng dụng
+
+        if (grid.children.length > 0) {
+
+            container.appendChild(
+                section
+            );
+        }
+
     });
 
 
-    // Không có kết quả
+    // ==============================
+    // Không tìm thấy ứng dụng
+    // ==============================
+
     if (!hasResult) {
 
         container.innerHTML = `
@@ -371,13 +538,24 @@ if (searchInput) {
                     .toLowerCase()
                     .trim();
 
+
+            // ==========================
             // Không nhập từ khóa
+            // ==========================
+
             if (keyword === "") {
 
-                renderApps(appData);
+                renderApps(
+                    appData
+                );
 
                 return;
             }
+
+
+            // ==========================
+            // Lọc ứng dụng
+            // ==========================
 
             const filtered =
                 appData.map(category => {
@@ -388,19 +566,32 @@ if (searchInput) {
                             category.category,
 
                         apps:
-                            category.apps.filter(app => {
+                            Array.isArray(
+                                category.apps
+                            )
+                                ? category.apps.filter(
+                                    app => {
 
-                                const name =
-                                    String(
-                                        app.name || ""
-                                    ).toLowerCase();
+                                        const name =
+                                            String(
+                                                app.name || ""
+                                            ).toLowerCase();
 
-                                return name.includes(keyword);
-                            })
+                                        return name.includes(
+                                            keyword
+                                        );
+                                    }
+                                )
+                                : []
                     };
+
                 });
 
-            renderApps(filtered);
+
+            renderApps(
+                filtered
+            );
+
         }
     );
 }
@@ -414,6 +605,10 @@ async function loadApps() {
 
     try {
 
+        // ==========================
+        // Hiển thị loading
+        // ==========================
+
         container.innerHTML = `
             <div class="loading">
 
@@ -426,6 +621,11 @@ async function loadApps() {
             </div>
         `;
 
+
+        // ==========================
+        // Đọc apps.json
+        // ==========================
+
         const response =
             await fetch(
                 "apps.json",
@@ -434,44 +634,74 @@ async function loadApps() {
                 }
             );
 
+
         if (!response.ok) {
 
             throw new Error(
-                "Không thể đọc apps.json"
+                `Không thể đọc apps.json (${response.status})`
             );
         }
+
+
+        // ==========================
+        // Chuyển sang JSON
+        // ==========================
 
         const json =
             await response.json();
 
 
-        // Hỗ trợ cấu trúc:
-        // { categories: [...] }
-        // hoặc trực tiếp [...]
+        // ==========================
+        // Kiểm tra cấu trúc
+        // ==========================
 
         if (Array.isArray(json)) {
 
-            appData = json;
+            appData =
+                json;
 
-        } else if (
+        }
+
+        else if (
             json &&
-            Array.isArray(json.categories)
+            Array.isArray(
+                json.categories
+            )
         ) {
 
-            appData = json.categories;
+            appData =
+                json.categories;
 
-        } else {
+        }
+
+        else {
 
             throw new Error(
                 "Cấu trúc apps.json không hợp lệ"
             );
         }
 
-        renderApps(appData);
+
+        // ==========================
+        // Hiển thị ứng dụng
+        // ==========================
+
+        renderApps(
+            appData
+        );
+
 
     } catch (error) {
 
-        console.error(error);
+        console.error(
+            "Lỗi tải apps.json:",
+            error
+        );
+
+
+        // ==========================
+        // Hiển thị lỗi
+        // ==========================
 
         container.innerHTML = `
             <div class="empty error">
