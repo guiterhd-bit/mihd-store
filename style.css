@@ -305,13 +305,10 @@ body {
 
 #appContainer {
     width: 100%;
-
     max-width: 1500px;
-
     margin: 0 auto;
-
-    padding:
-        60px 30px 70px;
+    padding: 60px 30px 70px;
+    background: #FFF8ED;
 }
 
 
