@@ -156,20 +156,13 @@ body {
         "Be Vietnam Pro",
         Arial,
         sans-serif;
-
     font-size: 21px;
-
     font-weight: 500;
-
+    font-style: italic;
     line-height: 1.5;
-
     color: #ffffff;
-
-    margin:
-        0 0 16px;
-
+    margin: 0 0 16px;
     text-align: center;
-
     opacity: 0.98;
 }
 
