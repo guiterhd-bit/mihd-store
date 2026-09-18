@@ -25,15 +25,10 @@ body {
         "Be Vietnam Pro",
         Arial,
         sans-serif;
-
-    background: #eeeeee;
-
+    background: #FFFDF5;
     color: #222;
-
     min-height: 100vh;
-
     -webkit-font-smoothing: antialiased;
-
     text-rendering: optimizeLegibility;
 }
 
