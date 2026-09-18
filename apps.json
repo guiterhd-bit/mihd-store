@@ -124,7 +124,7 @@
   },
 
   {
-    "category": "🎬 Giải Trí & Thể Thao",
+    "category": "🎬 Ứng dụng Giải Trí",
     "apps": [
       {
         "name": "Phim 4K",
@@ -161,7 +161,13 @@
         "version": "39.9.3",
         "size": "28 MB",
         "file": "https://github.com/guiterhd-bit/Xiaomi-H-i-D-ng/raw/refs/heads/main/tiktoklite.apk"
-      },
+      }
+    ]
+  },
+
+  {
+    "category": "⚽️ Ứng dụng Thể Thao",
+    "apps": [
       {
         "name": "Get Out",
         "version": "2.end",
@@ -196,11 +202,17 @@
   },
 
   {
-    "category": "🛠 Công cụ",
+    "category": "⚙️ Ứng dụng Tiện Ích",
     "apps": [
       {
         "name": "Scanner Bluetooth",
         "file": "https://github.com/guiterhd-bit/direct-link/raw/refs/heads/main/BluetoothScanner.apk"
+      },
+      {
+        "name": "Projectivy Launcher",
+        "version": "4.71",
+        "size": "16 MB",
+        "file": "https://github.com/guiterhd-bit/direct-link/raw/refs/heads/main/project.apk"
       },
       {
         "name": "Mix Plorer",
@@ -213,12 +225,6 @@
       {
         "name": "Super Voice",
         "file": "https://github.com/guiterhd-bit/direct-link/raw/refs/heads/main/supervoice.apk"
-      },
-      {
-        "name": "Projectivy Launcher",
-        "version": "4.71",
-        "size": "16 MB",
-        "file": "https://github.com/guiterhd-bit/direct-link/raw/refs/heads/main/project.apk"
       },
       {
         "name": "Katniss Voice",
