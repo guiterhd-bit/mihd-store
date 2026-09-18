@@ -15,9 +15,9 @@ html {
 
 body {
     font-family:
-        Arial,
+        sans-serif,
         Helvetica,
-        sans-serif;
+        Helvetica;
 
     background: #f6f6f6;
     color: #222;
@@ -107,7 +107,7 @@ body {
    ========================================= */
 
 .header h1 {
-    font-size: 42px;
+    font-size: 60px;
 
     font-weight: 800;
 
@@ -132,7 +132,7 @@ body {
    ========================================= */
 
 .address {
-    font-size: 16px;
+    font-size: 25px;
 
     line-height: 1.6;
 
@@ -147,7 +147,7 @@ body {
    ========================================= */
 
 .hotline {
-    font-size: 16px;
+    font-size: 25px;
 
     line-height: 1.6;
 
