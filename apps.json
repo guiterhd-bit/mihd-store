@@ -76,48 +76,50 @@
     "apps": [
       {
         "name": "MiHD TV",
-        "version": "2.6",
+        "thumbnail": "https://raw.githubusercontent.com/guiterhd-bit/mihdtv/main/mihdtv.png",
         "size": "19 MB",
         "file": "https://github.com/guiterhd-bit/direct-link/raw/refs/heads/main/MiHDTV.apk"
       },
       {
         "name": "MiHDTV Google TV",
-        "version": "v6.2",
+        "thumbnail": "https://raw.githubusercontent.com/guiterhd-bit/mihdtv/main/miggtv.png",
         "size": "9 MB",
         "file": "https://github.com/guiterhd-bit/direct-link/raw/refs/heads/main/miggtv.apk"
       },
       {
         "name": "Mi Pro TV",
-        "version": "2.6",
+        "thumbnail": "https://raw.githubusercontent.com/guiterhd-bit/mihdtv/main/miprotv.png",
         "size": "17 MB",
         "file": "https://github.com/guiterhd-bit/direct-link/raw/refs/heads/main/miprotv.apk"
       },
       {
         "name": "XemTV",
-        "version": "v5.8.8",
+        "thumbnail": "https://raw.githubusercontent.com/guiterhd-bit/mihdtv/main/xemtv.png",
         "size": "6 MB",
         "file": "https://github.com/guiterhd-bit/direct-link/raw/refs/heads/main/XemTV_v5.8.8.apk"
       },
       {
         "name": "VietPlayTV",
-        "version": "2.4",
+        "thumbnail": "https://raw.githubusercontent.com/guiterhd-bit/mihdtv/main/vietplay.png",
         "size": "10 MB",
         "file": "https://github.com/guiterhd-bit/direct-link/raw/refs/heads/main/vietplay.apk"
       },
       {
         "name": "FPT Play",
-        "version": "4.1",
+        "thumbnail": "https://raw.githubusercontent.com/guiterhd-bit/mihdtv/main/fpt.png",
         "size": "88 MB",
         "file": "https://github.com/guiterhd-bit/Xiaomi-H-i-D-ng/raw/refs/heads/main/fptplay.apk"
       },
       {
         "name": "Super OK",
-        "version": "2.6",
+        "thumbnail": "https://raw.githubusercontent.com/guiterhd-bit/mihdtv/main/super.png",
         "size": "57 MB",
         "file": "https://github.com/guiterhd-bit/Xiaomi-H-i-D-ng/raw/refs/heads/main/SuperOK.apk"
       },
       {
         "name": "M3U-Adr5",
+        "thumbnail": "https://raw.githubusercontent.com/guiterhd-bit/mihdtv/main/m3u.png",
+        "size": " MB",
         "file": "https://github.com/guiterhd-bit/direct-link/raw/refs/heads/main/m3u.apk"
       }
     ]
