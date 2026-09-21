@@ -1,21 +1,11 @@
-// ======================================================
-// MiHD Store - script.js
-// Phiên bản đơn giản - không sử dụng bộ đếm lượt tải
-// ======================================================
-
 "use strict";
 
 // ======================================================
-// BIẾN TOÀN CỤC
+// MiHD Store
+// Không sử dụng CounterAPI
 // ======================================================
 
 let appData = [];
-
-const container =
-    document.getElementById("appContainer");
-
-const searchInput =
-    document.getElementById("search");
 
 const DEFAULT_THUMBNAIL =
     "https://raw.githubusercontent.com/guiterhd-bit/mihdtv/main/mstore2.png";
@@ -25,11 +15,7 @@ const DEFAULT_THUMBNAIL =
 // ======================================================
 
 function escapeHTML(value) {
-
-    if (
-        value === null ||
-        value === undefined
-    ) {
+    if (value === null || value === undefined) {
         return "";
     }
 
@@ -46,11 +32,7 @@ function escapeHTML(value) {
 // ======================================================
 
 function escapeAttribute(value) {
-
-    if (
-        value === null ||
-        value === undefined
-    ) {
+    if (value === null || value === undefined) {
         return "";
     }
 
@@ -62,54 +44,475 @@ function escapeAttribute(value) {
 }
 
 // ======================================================
-// TẠO ID ỨNG DỤNG
-// ======================================================
-
-function getAppId(app) {
-
-    if (app && app.id) {
-        return String(app.id);
-    }
-
-    return String(
-        (app && app.name) || "app"
-    )
-        .toLowerCase()
-        .trim()
-        .replace(/[^a-z0-9]+/g, "-")
-        .replace(/^-+|-+$/g, "");
-}
-
-// ======================================================
-// TẠO CARD ỨNG DỤNG
+// TẠO CARD
 // ======================================================
 
 function createAppCard(app) {
 
-    const card =
-        document.createElement("div");
+    const card = document.createElement("div");
 
     card.className = "card";
 
-    // --------------------------------------------------
-    // THÔNG TIN ỨNG DỤNG
-    // --------------------------------------------------
-
-    const appName =
+    const name =
         app.name || "Ứng dụng";
 
     const thumbnail =
         app.thumbnail || DEFAULT_THUMBNAIL;
 
-    const appSize =
+    const size =
         app.size || "Không rõ";
 
-    const appFile =
-        app.file || "";
+    const file =
+        app.file || "#";
+
+    card.innerHTML = `
+        <div class="thumbnail-box">
+
+            <img
+                class="thumbnail"
+                src="${escapeAttribute(thumbnail)}"
+                alt="${escapeAttribute(name)}"
+                loading="lazy"
+            >
+
+        </div>
+
+        <div class="card-content">
+
+            <h3 class="app-name">
+                ${escapeHTML(name)}
+            </h3>
+
+            <div class="app-info">
+
+                <span class="app-size">
+                    💾 ${escapeHTML(size)}
+                </span>
+
+            </div>
+
+            <a
+                class="download"
+                href="${escapeAttribute(file)}"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                ⬇ Tải về
+            </a>
+
+        </div>
+    `;
 
     // --------------------------------------------------
-    // HTML CARD
+    // ẢNH LỖI
     // --------------------------------------------------
+
+    const image =
+        card.querySelector(".thumbnail");
+
+    if (image) {
+
+        image.addEventListener(
+            "error",
+            function () {
+
+                if (
+                    image.src !==
+                    DEFAULT_THUMBNAIL
+                ) {
+                    image.src =
+                        DEFAULT_THUMBNAIL;
+                }
+
+            }
+        );
+    }
+
+    // --------------------------------------------------
+    // KIỂM TRA LINK
+    // --------------------------------------------------
+
+    const button =
+        card.querySelector(".download");
+
+    if (button && !app.file) {
+
+        button.addEventListener(
+            "click",
+            function (event) {
+
+                event.preventDefault();
+
+                alert(
+                    "Ứng dụng này chưa có liên kết tải xuống."
+                );
+            }
+        );
+    }
+
+    return card;
+}
+
+// ======================================================
+// HIỂN THỊ ỨNG DỤNG
+// ======================================================
+
+function renderApps(data, container) {
+
+    if (!container) {
+
+        console.error(
+            "Không tìm thấy #appContainer"
+        );
+
+        return;
+    }
+
+    container.innerHTML = "";
+
+    let totalApps = 0;
+
+    // --------------------------------------------------
+    // DUYỆT CATEGORY
+    // --------------------------------------------------
+
+    data.forEach(category => {
+
+        if (
+            !category ||
+            !Array.isArray(category.apps)
+        ) {
+            return;
+        }
+
+        const validApps =
+            category.apps.filter(
+                app =>
+                    app &&
+                    app.name
+            );
+
+        if (
+            validApps.length === 0
+        ) {
+            return;
+        }
+
+        // ----------------------------------------------
+        // CATEGORY
+        // ----------------------------------------------
+
+        const section =
+            document.createElement("section");
+
+        section.className =
+            "category";
+
+        section.innerHTML = `
+            <h2 class="category-title">
+                ${escapeHTML(
+                    category.category ||
+                    "Ứng dụng"
+                )}
+            </h2>
+
+            <div class="grid"></div>
+        `;
+
+        const grid =
+            section.querySelector(".grid");
+
+        // ----------------------------------------------
+        // APP
+        // ----------------------------------------------
+
+        validApps.forEach(app => {
+
+            const card =
+                createAppCard(app);
+
+            grid.appendChild(card);
+
+            totalApps++;
+        });
+
+        container.appendChild(section);
+    });
+
+    // --------------------------------------------------
+    // KHÔNG CÓ APP
+    // --------------------------------------------------
+
+    if (totalApps === 0) {
+
+        container.innerHTML = `
+            <div class="empty">
+
+                <div class="empty-icon">
+                    🔍
+                </div>
+
+                <div class="empty-title">
+                    Không có ứng dụng
+                </div>
+
+                <div class="empty-text">
+                    Không tìm thấy ứng dụng trong apps.json.
+                </div>
+
+            </div>
+        `;
+    }
+
+    console.log(
+        `MiHD Store: đã hiển thị ${totalApps} ứng dụng.`
+    );
+}
+
+// ======================================================
+// TÌM KIẾM
+// ======================================================
+
+function setupSearch(container) {
+
+    const searchInput =
+        document.getElementById("search");
+
+    if (!searchInput) {
+        console.log(
+            "Không tìm thấy ô tìm kiếm #search."
+        );
+        return;
+    }
+
+    searchInput.addEventListener(
+        "input",
+        function () {
+
+            const keyword =
+                this.value
+                    .toLowerCase()
+                    .trim();
+
+            // ------------------------------------------
+            // HIỂN THỊ TOÀN BỘ
+            // ------------------------------------------
+
+            if (!keyword) {
+
+                renderApps(
+                    appData,
+                    container
+                );
+
+                return;
+            }
+
+            // ------------------------------------------
+            // TÌM KIẾM
+            // ------------------------------------------
+
+            const filtered =
+                appData.map(category => {
+
+                    return {
+
+                        category:
+                            category.category,
+
+                        apps:
+                            Array.isArray(
+                                category.apps
+                            )
+                                ? category.apps.filter(
+                                    app => {
+
+                                        const name =
+                                            String(
+                                                app.name ||
+                                                ""
+                                            )
+                                            .toLowerCase();
+
+                                        return name.includes(
+                                            keyword
+                                        );
+                                    }
+                                )
+                                : []
+                    };
+                });
+
+            renderApps(
+                filtered,
+                container
+            );
+        }
+    );
+}
+
+// ======================================================
+// TẢI APPS.JSON
+// ======================================================
+
+async function loadApps() {
+
+    // --------------------------------------------------
+    // LẤY ELEMENT SAU KHI DOM ĐÃ SẴN SÀNG
+    // --------------------------------------------------
+
+    const container =
+        document.getElementById(
+            "appContainer"
+        );
+
+    if (!container) {
+
+        console.error(
+            'LỖI: Không tìm thấy element id="appContainer".'
+        );
+
+        return;
+    }
+
+    // --------------------------------------------------
+    // LOADING
+    // --------------------------------------------------
+
+    container.innerHTML = `
+        <div class="loading">
+
+            <div class="loading-spinner"></div>
+
+            <div>
+                Đang tải danh sách ứng dụng...
+            </div>
+
+        </div>
+    `;
+
+    try {
+
+        // ------------------------------------------------
+        // ĐỌC APPS.JSON
+        // ------------------------------------------------
+
+        const response =
+            await fetch(
+                "./apps.json",
+                {
+                    cache: "no-store"
+                }
+            );
+
+        if (!response.ok) {
+
+            throw new Error(
+                `apps.json HTTP ${response.status}`
+            );
+        }
+
+        // ------------------------------------------------
+        // PARSE JSON
+        // ------------------------------------------------
+
+        const json =
+            await response.json();
+
+        // ------------------------------------------------
+        // KIỂM TRA JSON
+        // ------------------------------------------------
+
+        if (Array.isArray(json)) {
+
+            appData =
+                json;
+
+        } else if (
+            json &&
+            Array.isArray(
+                json.categories
+            )
+        ) {
+
+            appData =
+                json.categories;
+
+        } else {
+
+            throw new Error(
+                "Cấu trúc apps.json không hợp lệ."
+            );
+        }
+
+        // ------------------------------------------------
+        // RENDER
+        // ------------------------------------------------
+
+        renderApps(
+            appData,
+            container
+        );
+
+        // ------------------------------------------------
+        // SEARCH
+        // ------------------------------------------------
+
+        setupSearch(
+            container
+        );
+
+        console.log(
+            "MiHD Store: apps.json đã tải thành công."
+        );
+
+    } catch (error) {
+
+        console.error(
+            "MiHD Store lỗi:",
+            error
+        );
+
+        container.innerHTML = `
+            <div class="empty error">
+
+                <div class="empty-icon">
+                    ⚠️
+                </div>
+
+                <div class="empty-title">
+                    Không thể tải ứng dụng
+                </div>
+
+                <div class="empty-text">
+                    ${escapeHTML(
+                        error.message
+                    )}
+                </div>
+
+            </div>
+        `;
+    }
+}
+
+// ======================================================
+// KHỞI ĐỘNG SAU KHI HTML ĐÃ TẢI
+// ======================================================
+
+if (
+    document.readyState ===
+    "loading"
+) {
+
+    document.addEventListener(
+        "DOMContentLoaded",
+        loadApps
+    );
+
+} else {
+
+    loadApps();
+}    // --------------------------------------------------
 
     card.innerHTML = `
         <div class="thumbnail-box">
